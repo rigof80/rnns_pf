@@ -1,0 +1,7 @@
+configargparse==0.15.1
+ipdb==0.12.2
+torch
+tqdm
+ipdb
+tensorboard
+matplotlib

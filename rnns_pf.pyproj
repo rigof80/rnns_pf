@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2b65860c-2d1d-4df7-825f-ea2a8881f40a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>arguments.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|envRNNPF|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="imgs\networks.jpg" />
+    <Content Include="requirements.txt" />
+    <Content Include="requirements_colab.txt" />
+    <Content Include="requirements_win.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="arguments.py" />
+    <Compile Include="dataset.py" />
+    <Compile Include="data_utils.py" />
+    <Compile Include="evaluate.py" />
+    <Compile Include="main.py" />
+    <Compile Include="model.py" />
+    <Compile Include="pfrnns.py" />
+    <Compile Include="plot_particle.py" />
+    <Compile Include="timer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="imgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\..\Environments\envRNNPF\">
+      <Id>envRNNPF</Id>
+      <Version>3.7</Version>
+      <Description>envRNNPF (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
